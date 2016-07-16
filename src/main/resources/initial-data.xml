@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<catalog>
+    <book>
+        <id>bk101</id>
+        <author>
+            <name>Matthew</name>
+            <surname>Gambardella</surname>
+        </author>
+        <title>XML Developer's Guide</title>
+        <genre>Computer</genre>
+        <price>44.95</price>
+        <description>An in-depth look at creating applications
+            with XML.</description>
+    </book>
+    <book>
+        <id>bk102</id>
+        <author>
+            <name>Kim</name>
+            <surname>Ralls</surname>
+        </author>
+        <title>Midnight Rain</title>
+        <genre>Fantasy</genre>
+        <price>5.95</price>
+        <description>A former architect battles corporate zombies,
+            an evil sorceress, and her own childhood to become queen
+            of the world.</description>
+    </book>
+    <book>
+        <id>bk103</id>
+        <author>
+            <name>Eva</name>
+            <surname>Corets</surname>
+        </author>
+        <title>Maeve Ascendant</title>
+        <genre>Fantasy</genre>
+        <price>5.95</price>
+        <description>After the collapse of a nanotechnology
+            society in England, the young survivors lay the
+            foundation for a new society.</description>
+    </book>
+    <book>
+        <id>bk104</id>
+        <author>
+            <name>Eva</name>
+            <surname>Corets</surname>
+        </author>
+        <title>Oberon's Legacy</title>
+        <genre>Fantasy</genre>
+        <price>5.95</price>
+        <description>In post-apocalypse England, the mysterious
+            agent known only as Oberon helps to create a new life
+            for the inhabitants of London. Sequel to Maeve
+            Ascendant.</description>
+    </book>
+    <book>
+        <id>bk105</id>
+        <author>
+            <name>Eva</name>
+            <surname>Corets</surname>
+        </author><title>The Sundered Grail</title>
+        <genre>Fantasy</genre>
+        <price>5.95</price>
+        <description>The two daughters of Maeve, half-sisters,
+            battle one another for control of England. Sequel to
+            Oberon's Legacy.</description>
+    </book>
+    <book>
+        <id>bk106</id>
+        <author>
+            <name>Cynthia</name>
+            <surname>Randall</surname>
+        </author>
+        <title>Lover Birds</title>
+        <genre>Romance</genre>
+        <price>4.95</price>
+        <description>When Carla meets Paul at an ornithology
+            conference, tempers fly as feathers get ruffled.</description>
+    </book>
+    <book>
+        <id>bk107</id>
+        <author>
+            <name>Paula</name>
+            <surname>Thurman</surname>
+        </author>
+        <title>Splish Splash</title>
+        <genre>Romance</genre>
+        <price>4.95</price>
+        <description>A deep sea diver finds true love twenty
+            thousand leagues beneath the sea.</description>
+    </book>
+    <book>
+        <id>bk108</id>
+        <author>
+            <name>Stefan</name>
+            <surname>Knorr</surname>
+        </author>
+        <title>Creepy Crawlies</title>
+        <genre>Horror</genre>
+        <price>4.95</price>
+        <description>An anthology of horror stories about roaches,
+            centipedes, scorpions  and other insects.</description>
+    </book>
+    <book>
+        <id>bk109</id>
+        <author>
+            <name>Peter</name>
+            <surname>Kress</surname>
+        </author>
+        <title>Paradox Lost</title>
+        <genre>Science Fiction</genre>
+        <price>6.95</price>
+        <description>After an inadvertant trip through a Heisenberg
+            Uncertainty Device, James Salway discovers the problems
+            of being quantum.</description>
+    </book>
+    <book>
+        <id>bk110</id>
+        <author>
+            <name>Tim</name>
+            <surname>O'Brien</surname>
+        </author>
+        <title>Microsoft .NET: The Programming Bible</title>
+        <genre>Computer</genre>
+        <price>36.95</price>
+        <description>Microsoft's .NET initiative is explored in
+            detail in this deep programmer's reference.</description>
+    </book>
+    <book>
+        <id>bk111</id>
+        <author>
+            <name>Tim</name>
+            <surname>O'Brien</surname>
+        </author>        <title>MSXML3: A Comprehensive Guide</title>
+        <genre>Computer</genre>
+        <price>36.95</price>
+        <description>The Microsoft MSXML3 parser is covered in
+            detail, with attention to XML DOM interfaces, XSLT processing,
+            SAX and more.</description>
+    </book>
+    <book>
+        <id>bk112</id>
+        <author>
+            <name>Mike</name>
+            <surname>Galos</surname>
+        </author>
+        <title>Visual Studio 7: A Comprehensive Guide</title>
+        <genre>Computer</genre>
+        <price>49.95</price>
+        <description>Microsoft Visual Studio 7 is explored in depth,
+            looking at how Visual Basic, Visual C++, C#, and ASP+ are
+            integrated into a comprehensive development
+            environment.</description>
+    </book>
+</catalog>
