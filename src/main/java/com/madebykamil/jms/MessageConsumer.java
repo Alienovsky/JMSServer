@@ -1,9 +1,10 @@
 package com.madebykamil.jms;
 
 import com.madebykamil.model.Person;
-import org.apache.activemq.command.ActiveMQObjectMessage;
 
-import javax.jms.*;
+import javax.jms.Message;
+import javax.jms.MessageListener;
+import javax.jms.TextMessage;
 
 public class MessageConsumer implements MessageListener {
 
@@ -13,13 +14,11 @@ public class MessageConsumer implements MessageListener {
         this.messageSender = messageSender;
     }
 
-    @Override
     public void onMessage(Message message) {
         if (message instanceof TextMessage) {
-            final TextMessage textMessage = (TextMessage) message;
+            final TextMessage textMeocssage = (TextMessage) message;
             Person p = new Person("Kamil","T","1111","2222",1);
             messageSender.send(p);
         }
-
     }
 }
