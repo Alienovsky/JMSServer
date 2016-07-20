@@ -1,5 +1,9 @@
 package com.madebykamil.jms;
 
+import com.madebykamil.jms.responses.AddBookResponse;
+import com.madebykamil.jms.responses.GetAllBooksResponse;
+import com.madebykamil.jms.responses.GetBookByIdResponse;
+import com.madebykamil.jms.responses.RemoveBookResponse;
 import com.madebykamil.model.Book;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
@@ -35,10 +39,37 @@ public class MessageSender {
         jmsTemplate.send(messageCreator);
     }
 
-    public void send(final String textMessage){
+    public void send(final GetAllBooksResponse response) {
         MessageCreator messageCreator = new MessageCreator() {
             public Message createMessage(Session session) throws JMSException {
-                return session.createTextMessage(textMessage);
+                return session.createObjectMessage(response);
+            }
+        };
+        jmsTemplate.send(messageCreator);
+    }
+
+    public void send(final GetBookByIdResponse response) {
+        MessageCreator messageCreator = new MessageCreator() {
+            public Message createMessage(Session session) throws JMSException {
+                return session.createObjectMessage(response);
+            }
+        };
+        jmsTemplate.send(messageCreator);
+    }
+
+    public void send(final AddBookResponse response) {
+        MessageCreator messageCreator = new MessageCreator() {
+            public Message createMessage(Session session) throws JMSException {
+                return session.createObjectMessage(response);
+            }
+        };
+        jmsTemplate.send(messageCreator);
+    }
+
+    public void send(final RemoveBookResponse response) {
+        MessageCreator messageCreator = new MessageCreator() {
+            public Message createMessage(Session session) throws JMSException {
+                return session.createObjectMessage(response);
             }
         };
         jmsTemplate.send(messageCreator);

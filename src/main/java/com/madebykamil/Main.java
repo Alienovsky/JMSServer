@@ -14,6 +14,5 @@ import java.io.FileReader;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("/application-context.xml");
-
     }
 }
