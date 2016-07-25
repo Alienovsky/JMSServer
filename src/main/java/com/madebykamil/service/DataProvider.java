@@ -16,7 +16,7 @@ public class DataProvider {
     public DataProvider() {
         FileReader reader = null;  // load file
         try {
-            reader = new FileReader("C:\\Kamil\\Workspace\\spock_training\\JMSServer\\src\\main\\resources\\initial-data.xml");
+            reader = new FileReader("C:\\Workspace\\projects\\JMS\\Server\\src\\main\\resources\\initial-data.xml");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -28,7 +28,7 @@ public class DataProvider {
     }
 
     public Book provideBook(String id) {
-        if (id == null && id.isEmpty()) {
+        if (id == null || id.isEmpty()) {
             return null;
         }
         for (Book book : catalog.getBooks()) {
@@ -42,7 +42,10 @@ public class DataProvider {
     public String addBook(String id, String authorName, String authorSurname, String title, String genre, Float price, String description) {
         if (id != null && authorName != null && authorSurname != null && title != null && genre != null && price != null && description != null) {
             if (!id.isEmpty() && !authorName.isEmpty() && !authorSurname.isEmpty() && !title.isEmpty() && !genre.isEmpty() && !description.isEmpty()) {
-                Book book = new Book(id, new Author(authorName, authorSurname), title, genre, price, description);
+                final Book book = new Book(id, new Author(authorName, authorSurname), title, genre, price, description);
+                if(checkIfBookIsAlreadyInCatalog(book.getId())){
+                    return "Such book already exists";
+                }
                 catalog.getBooks().add(book);
                 return "";
             }
@@ -75,6 +78,15 @@ public class DataProvider {
 
     public List<Book> provideAllBooks() {
         return catalog.getBooks();
+    }
+
+    public boolean checkIfBookIsAlreadyInCatalog(String id){
+     for(Book book : catalog.getBooks()){
+         if(book.getId().equals(id)){
+             return true;
+         }
+     }
+        return false;
     }
 
 }

@@ -8,10 +8,6 @@ public class GetBookByIdResponse extends AbstractResponse implements Serializabl
     private static final long serialVersionUID = 777L;
     private Book book;
 
-    public GetBookByIdResponse(Book book) {
-        this.book = book;
-    }
-
     public Book getBook() {
         return book;
     }

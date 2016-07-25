@@ -4,13 +4,14 @@ import java.io.Serializable;
 
 public class RemoveBookResponse extends  AbstractResponse implements Serializable {
     private static final long serialVersionUID = 888L;
-    private String bookId;
 
-    public String getBookId() {
-        return bookId;
+    public boolean isRemoved() {
+        return isRemoved;
     }
 
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
+    public void setIsRemoved(boolean isRemoved) {
+        this.isRemoved = isRemoved;
     }
+
+    private boolean isRemoved;
 }

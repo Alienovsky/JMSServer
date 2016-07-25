@@ -5,6 +5,7 @@ import com.madebykamil.jms.requests.GetAllBooksRequest;
 import com.madebykamil.jms.requests.GetBookByIdRequest;
 import com.madebykamil.jms.requests.RemoveBookRequest;
 import com.madebykamil.jms.responses.*;
+import com.madebykamil.model.Book;
 import com.madebykamil.service.DataProvider;
 
 import javax.jms.*;
@@ -31,7 +32,15 @@ public class MessageConsumer implements MessageListener {
                 }
                 else if(objectFromMessage instanceof GetBookByIdRequest){
                     GetBookByIdRequest request = (GetBookByIdRequest) objectFromMessage;
-                    GetBookByIdResponse response = new GetBookByIdResponse(dataProvider.provideBook(request.getBookId()));
+                    Book book = dataProvider.provideBook(request.getBookId());
+                    GetBookByIdResponse response = new GetBookByIdResponse();
+                    if(book != null){
+                        response.setBook(book);
+                    }
+                    else{
+                        response.setErrors("There is no book with ID: "+request.getBookId());
+                    }
+
                     messageSender.send(response);
                 }
                 else if(objectFromMessage instanceof AddBookRequest){
@@ -50,8 +59,9 @@ public class MessageConsumer implements MessageListener {
                     String result = dataProvider.removeBook(request.getBookId());
                     RemoveBookResponse response = new RemoveBookResponse();
                     if(result.isEmpty()){
-                        response.setBookId(request.getBookId());
+                        response.setIsRemoved(true);
                     } else {
+                        response.setIsRemoved(false);
                         response.setErrors(dataProvider.removeBook(request.getBookId()));
                     }
                     messageSender.send(response);
