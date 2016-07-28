@@ -5,6 +5,7 @@ import com.madebykamil.jms.requests.GetAllBooksRequest;
 import com.madebykamil.jms.requests.GetBookByIdRequest;
 import com.madebykamil.jms.requests.RemoveBookRequest;
 import com.madebykamil.jms.responses.*;
+import com.madebykamil.model.Author;
 import com.madebykamil.model.Book;
 import com.madebykamil.service.DataProvider;
 
